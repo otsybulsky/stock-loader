@@ -43,7 +43,8 @@ defmodule StockLoader.Web.MixProject do
       {:gettext, "~> 0.11"},
       {:stock_loader, in_umbrella: true},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:httpoison, "~> 1.4"}
     ]
   end
 
