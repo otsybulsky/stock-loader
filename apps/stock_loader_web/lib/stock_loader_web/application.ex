@@ -1,4 +1,4 @@
-defmodule StockLoaderWeb.Application do
+defmodule StockLoader.Web.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -9,21 +9,21 @@ defmodule StockLoaderWeb.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      StockLoaderWeb.Endpoint
-      # Starts a worker by calling: StockLoaderWeb.Worker.start_link(arg)
-      # {StockLoaderWeb.Worker, arg},
+      StockLoader.Web.Endpoint
+      # Starts a worker by calling: StockLoader.Web.Worker.start_link(arg)
+      # {StockLoader.Web.Worker, arg},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: StockLoaderWeb.Supervisor]
+    opts = [strategy: :one_for_one, name: StockLoader.Web.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    StockLoaderWeb.Endpoint.config_change(changed, removed)
+    StockLoader.Web.Endpoint.config_change(changed, removed)
     :ok
   end
 end

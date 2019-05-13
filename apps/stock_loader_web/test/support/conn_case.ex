@@ -1,4 +1,4 @@
-defmodule StockLoaderWeb.ConnCase do
+defmodule StockLoader.Web.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -19,10 +19,10 @@ defmodule StockLoaderWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      alias StockLoaderWeb.Router.Helpers, as: Routes
+      alias StockLoader.Web.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint StockLoaderWeb.Endpoint
+      @endpoint StockLoader.Web.Endpoint
     end
   end
 

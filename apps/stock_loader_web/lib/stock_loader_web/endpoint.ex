@@ -1,7 +1,7 @@
-defmodule StockLoaderWeb.Endpoint do
+defmodule StockLoader.Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :stock_loader_web
 
-  socket "/socket", StockLoaderWeb.UserSocket,
+  socket "/socket", StockLoader.Web.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -40,5 +40,5 @@ defmodule StockLoaderWeb.Endpoint do
     key: "_stock_loader_web_key",
     signing_salt: "VDcrH/AL"
 
-  plug StockLoaderWeb.Router
+  plug StockLoader.Web.Router
 end
