@@ -1,5 +1,5 @@
-defmodule StockLoaderWeb.ErrorView do
-  use StockLoaderWeb, :view
+defmodule StockLoader.Web.ErrorView do
+  use StockLoader.Web, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

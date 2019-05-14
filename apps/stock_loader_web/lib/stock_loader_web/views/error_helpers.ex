@@ -1,4 +1,4 @@
-defmodule StockLoaderWeb.ErrorHelpers do
+defmodule StockLoader.Web.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -25,9 +25,9 @@ defmodule StockLoaderWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(StockLoaderWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(StockLoader.Web.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(StockLoaderWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(StockLoader.Web.Gettext, "errors", msg, opts)
     end
   end
 end

@@ -1,4 +1,4 @@
-defmodule StockLoaderWeb.MixProject do
+defmodule StockLoader.Web.MixProject do
   use Mix.Project
 
   def project do
@@ -23,7 +23,7 @@ defmodule StockLoaderWeb.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {StockLoaderWeb.Application, []},
+      mod: {StockLoader.Web.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -43,7 +43,9 @@ defmodule StockLoaderWeb.MixProject do
       {:gettext, "~> 0.11"},
       {:stock_loader, in_umbrella: true},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:httpoison, "~> 1.4"},
+      {:cors_plug, "~> 1.5"}
     ]
   end
 
