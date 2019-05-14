@@ -5,6 +5,11 @@ defmodule StockLoader.Web.Endpoint do
     websocket: true,
     longpoll: false
 
+  plug(
+    CORSPlug,
+    origin: "http://localhost:3000"
+  )
+
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phx.digest

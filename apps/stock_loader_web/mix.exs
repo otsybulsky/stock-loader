@@ -44,7 +44,8 @@ defmodule StockLoader.Web.MixProject do
       {:stock_loader, in_umbrella: true},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:httpoison, "~> 1.4"}
+      {:httpoison, "~> 1.4"},
+      {:cors_plug, "~> 1.5"}
     ]
   end
 
