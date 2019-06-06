@@ -10,6 +10,6 @@ defmodule StockLoader.Web.Router do
   scope "/api", StockLoader.Web do
     pipe_through :api
 
-    get "/data-m1", DataController, :get_m1
+    get "/data", DataController, :get_data
   end
 end
