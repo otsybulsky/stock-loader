@@ -4,4 +4,9 @@
 # the umbrella root.
 use Mix.Config
 
-import_config "prod.secret.exs"
+config :stock_loader, StockLoader.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: "${DATABASE_URL}",
+  database: "",
+  ssl: true,
+  pool_size: 2
