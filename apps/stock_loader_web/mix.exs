@@ -45,7 +45,8 @@ defmodule StockLoader.Web.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:httpoison, "~> 1.4"},
-      {:cors_plug, "~> 1.5"}
+      {:cors_plug, "~> 1.5"},
+      {:phoenix_html, "~> 2.11"}
     ]
   end
 
