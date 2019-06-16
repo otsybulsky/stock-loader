@@ -3,6 +3,7 @@ defmodule StockLoader.Umbrella.MixProject do
 
   def project do
     [
+      version: "0.1.0",
       apps_path: "apps",
       start_permanent: Mix.env() == :prod,
       deps: deps()
@@ -22,6 +23,6 @@ defmodule StockLoader.Umbrella.MixProject do
   # Dependencies listed here are available only for this project
   # and cannot be accessed from applications inside the apps folder
   defp deps do
-    []
+    [{:distillery, "~> 2.0", runtime: false}]
   end
 end

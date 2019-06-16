@@ -1,0 +1,2 @@
+MIX_ENV=prod mix release --env=prod
+MIX_ENV=prod APP_NAME=rechart-api SECRET_KEY_BASE="$(mix phx.gen.secret)" DATABASE_URL="postgresql://postgres:postgres@localhost:5432/stock_loader_dev" MY_HOSTNAME=example.com MY_COOKIE=secret REPLACE_OS_VARS=true MY_NODE_NAME=foo@127.0.0.1 PORT=4000 _build/prod/rel/stock_loader/bin/stock_loader console

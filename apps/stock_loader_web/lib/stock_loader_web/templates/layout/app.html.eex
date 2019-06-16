@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stock Loader</title>
+</head>
+
+<body style="margin: 2rem; color: #3d3d3d;">
+  <header>
+    <h1>Loader demo data for stock chart</h1>
+  </header>
+  <main>
+    <p><%= get_flash(@conn, :info) %></p>
+    <p><%= get_flash(@conn, :error) %></p>
+    <%= render @view_module, @view_template, assigns %>
+  </main>
+</body>
+
+</html>

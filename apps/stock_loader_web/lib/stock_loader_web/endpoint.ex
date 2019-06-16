@@ -7,7 +7,7 @@ defmodule StockLoader.Web.Endpoint do
 
   plug(
     CORSPlug,
-    origin: "http://localhost:3000"
+    origin: ["http://localhost:3000", "https://rechart-demo.herokuapp.com"]
   )
 
   # Serve at "/" the static files from "priv/static" directory.
