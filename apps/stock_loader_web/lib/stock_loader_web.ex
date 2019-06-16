@@ -1,12 +1,12 @@
-defmodule StockLoaderWeb do
+defmodule StockLoader.Web do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use StockLoaderWeb, :controller
-      use StockLoaderWeb, :view
+      use StockLoader.Web, :controller
+      use StockLoader.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,10 +19,10 @@ defmodule StockLoaderWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: StockLoaderWeb
+      use Phoenix.Controller, namespace: StockLoader.Web
       import Plug.Conn
-      import StockLoaderWeb.Gettext
-      alias StockLoaderWeb.Router.Helpers, as: Routes
+      import StockLoader.Web.Gettext
+      alias StockLoader.Web.Router.Helpers, as: Routes
     end
   end
 
@@ -30,14 +30,17 @@ defmodule StockLoaderWeb do
     quote do
       use Phoenix.View,
         root: "lib/stock_loader_web/templates",
-        namespace: StockLoaderWeb
+        namespace: StockLoader.Web
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
 
-      import StockLoaderWeb.ErrorHelpers
-      import StockLoaderWeb.Gettext
-      alias StockLoaderWeb.Router.Helpers, as: Routes
+      # Use all HTML functionality (forms, tags, etc)
+      use Phoenix.HTML
+
+      import StockLoader.Web.ErrorHelpers
+      import StockLoader.Web.Gettext
+      alias StockLoader.Web.Router.Helpers, as: Routes
     end
   end
 
@@ -52,7 +55,7 @@ defmodule StockLoaderWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import StockLoaderWeb.Gettext
+      import StockLoader.Web.Gettext
     end
   end
 
