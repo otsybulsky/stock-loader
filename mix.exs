@@ -3,7 +3,7 @@ defmodule StockLoader.Umbrella.MixProject do
 
   def project do
     [
-      version: "0.1.4",
+      version: "0.1.5",
       apps_path: "apps",
       start_permanent: Mix.env() == :prod,
       deps: deps()
